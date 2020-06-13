@@ -21,7 +21,7 @@ const ContactForm = () => {
             data-testid="firstName"
             name="firstName"
             placeholder="Edd"
-            ref={register({ required: true, maxLength: 3 })}
+            ref={register({ required: true })}
           />
           {errors.firstName && (
             <p data-testid="firstNameErr">Looks like there was an error: {errors.firstName.type}</p>
