@@ -21,8 +21,8 @@ test("First Name is greater than 3 char's", () =>{
 });
 
 test('You can add text to first name', () => {
-  const container = render(<ContactForm />);
-  const firstNameInput = container.getByTestId(/firstName/i);
+  const { getByTestId } = render(<ContactForm />);
+  const firstNameInput = getByTestId(/firstName/i);
  
   fireEvent.change(firstNameInput, { target: { value: 'paul' } });
   
@@ -30,8 +30,8 @@ test('You can add text to first name', () => {
 });
 
 test('Yow can add text to last name', () => {
-  const container = render(<ContactForm />);
-  const lastNameInput = container.getByTestId(/lastName/i);
+  const { getByTestId } = render(<ContactForm />);
+  const lastNameInput = getByTestId(/lastName/i);
  
   fireEvent.change(lastNameInput, { target: { value: 'jacob' } });
   
@@ -39,8 +39,8 @@ test('Yow can add text to last name', () => {
 });
 
 test('You can add text to email input', () => {
-  const container = render(<ContactForm />);
-  const emailInput = container.getByTestId(/email/i);
+  const { getByTestId } = render(<ContactForm />);
+  const emailInput = getByTestId(/email/i);
   
   fireEvent.change(emailInput, { target: { value: 'paul@yahoo.com' } });
   
@@ -48,8 +48,8 @@ test('You can add text to email input', () => {
 });
 
 test('You can add text to message', () => {
-  const container = render(<ContactForm />);
-  const messageInput = container.getByTestId(/message/i);
+  const { getByTestId } = render(<ContactForm />);
+  const messageInput = getByTestId(/message/i);
   
   fireEvent.change(messageInput, { target: { value: 'test message' } });
   
